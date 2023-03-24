@@ -134,6 +134,12 @@
                                 <p>Riwayat Donor</p>
                             </a>
                         </li>
+                        <li class="nav-item  {{ Request::is('') ? 'active' : '' }}">
+                            <a href="{{ url('') }}">
+                                <i class="fas fa-qrcode"></i>
+                                <p>Laporan</p>
+                            </a>
+                        </li>
                         @can('admin')
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">

@@ -72,6 +72,7 @@
             </li>
             <li class="nav-item {{ Request::is('tentang-darah') ? 'active' : '' }}"> 
               <a class="nav-link {{ Request::is('tentang-darah') ? 'active' : '' }}" href="tentang-darah">Tentang Darah</a>
+              
             </li>
             <li class="nav-item {{ Request::is('agenda-donor') ? 'active' : '' }}">
               <a class="nav-link {{ Request::is('agenda-donor') ? 'active' : '' }}" href="agenda-donor">Agenda Donor</a>

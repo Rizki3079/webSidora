@@ -10,5 +10,5 @@ class FormulirModel extends Model
 {
     use HasFactory;
 
-    public $table = "formulir";
+    public $table = "formulirs";
 }

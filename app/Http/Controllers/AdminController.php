@@ -93,9 +93,9 @@ class AdminController extends Controller
     {
 
     if (auth()->user()->role == 1) {
-            $Riwayat = DB::table('formulir')->where('user_id', auth()->user()->id)->get();
+            $Riwayat = DB::table('formulirs')->where('user_id', auth()->user()->id)->get();
         } else {
-            $Riwayat = DB::table('formulir')->get();
+            $Riwayat = DB::table('formulirs')->get();
         }
         
         $data = [

@@ -14,9 +14,9 @@
         <div class="col-md-12">
             <div class="card full-height">
                 <div class="card-body">
-                    <div class="card-title">Halo Admin</div>
-
+                    <div class="card-title">Hallo Admin</div>
                 </div>
+                
             </div>
         </div>
     </div>
