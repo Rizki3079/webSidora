@@ -21,3 +21,6 @@ include("adminRoutes.php");
 
 //Route User
 include("userRoutes.php");
+
+//Route Admin
+include("adminrsRoutes.php");
