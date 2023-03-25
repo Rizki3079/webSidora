@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('desa');
             $table->string('kecamatan');
             $table->string('kabupaten');
+            $table->string('jenis_darah');
             $table->string('status_pernikahan'); 
         });
     }

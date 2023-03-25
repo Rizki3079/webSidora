@@ -20,6 +20,7 @@
                 <th> <a href="" class="far fa-calendar-alt fa-3x text-danger"></a></th>
                 <th>Lokasi</th>
                 <th>Target Kantong</th>
+                
                 <th>
                     @can('admin')
                     <a href="/app-admin/agenda/create" class="btn btn-success">Tambah Data</a>

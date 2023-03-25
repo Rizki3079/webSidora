@@ -97,9 +97,7 @@
                     <div class="user">
                         <div class="info">
                             <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                                <span>
-                                    test
-                                </span>
+                                
                             </a>
                         </div>
                     </div>
@@ -134,13 +132,19 @@
                                 <p>Riwayat Donor</p>
                             </a>
                         </li>
-                        <li class="nav-item  {{ Request::is('') ? 'active' : '' }}">
-                            <a href="{{ url('') }}">
-                                <i class="fas fa-qrcode"></i>
+                        @can('admin')
+                        <li class="nav-item  {{ Request::is('app-admin/laporan*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/laporan') }}">
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Laporan</p>
                             </a>
                         </li>
-                        @can('admin')
+                        <li class="nav-item  {{ Request::is('app-admin/laporan*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/laporan') }}">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>Data Donor</p>
+                            </a>
+                        </li>
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>

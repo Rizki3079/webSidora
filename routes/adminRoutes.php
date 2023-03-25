@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DarahController;
 use App\Http\Controllers\agendaController;
+use App\Http\Controllers\stokController;
 
 Route::get("/login", [AdminController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('proccess-login');
@@ -24,6 +25,12 @@ Route::middleware('auth')->group(function(){
     Route::post("/app-admin/agenda/update", [AgendaController::class, 'update']);
     Route::get("/app-admin/agenda/create", [AgendaController::class, 'create']);
     Route::get("/app-admin/agenda/destroy/{id}", [AgendaController::class, 'destroy']);
+
+    Route::get('/', function () {
+        $title = 'Data Donor';
+        $slug ='data_donor';
+        return view('/data_donor', compact('title','slug'));
+    });
 });
 
 

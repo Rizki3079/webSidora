@@ -20,6 +20,7 @@
                 <th>NIK</th>
                 <th>Nama Pendonor</th>
                 <th>Tanggal Donor</th>
+                <th>Formulir</th>
                 
             </tr>
             </thead>
@@ -30,6 +31,7 @@
                 <td>{{ $r->nik }}</td>
                                     <td>{{ $r->nama }}</td>
                                     <td>{{ $r->tgl_donor }}</td>   
+                                    <td>{{ $r->tgl_formulir }}</td>   
                     
                 </tr>
              

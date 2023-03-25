@@ -10,16 +10,33 @@
 @endsection
 
 @section('container_section')
+  @can('admin')
     <div class="row mt--2">
         <div class="col-md-12">
             <div class="card full-height">
                 <div class="card-body">
-                    <div class="card-title">Hallo Admin</div>
+                    <div class="card-title"><b>Hallo Admin</div>
                 </div>
                 
             </div>
         </div>
     </div>
+   @endcan
+@endsection
+
+@section('container_section')
+    @can('user')
+    <div class="row mt--2">
+        <div class="col-md-12">
+            <div class="card full-height">
+                <div class="card-body">
+                    <div class="card-title"><b>Selamat Datang Di Website Sistem Informasi Donor Darah</b></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    @endcan
 @endsection
 
 @section('script_section')

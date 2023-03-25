@@ -1,10 +1,15 @@
 @extends('template_admin')
 
        <!-- START FORM -->
+    
        @section('header_section')
+     @can('user')
     <h2 class="text-white pb-2 fw-bold">Formulir Donor Darah</h2>
     <h5 class="text-white op-7 mb-2">Halaman Formulir</h5>
+    @endcan
         @endsection
+
+     @can('user')
        @section('container_section')
        <br>
        <br>
@@ -132,4 +137,5 @@
             </div>
           </form>
         </div>
+    @endcan
 @endsection
