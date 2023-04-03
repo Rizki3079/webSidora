@@ -31,13 +31,13 @@ class UserRolePermissionSeeder extends Seeder
             // $user->assignRole('user');
             // $admin->assignRole('admin');
 
-            $user = User::create([
-                'name' => 'user',
-                'email' => 'user@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 1,
-                'remember_token' => Str::random(10),
-            ]);
+            // $user = User::create([
+            //     'name' => 'user',
+            //     'email' => 'user@gmail.com',
+            //     'password' => bcrypt('password'),
+            //     'role' => 1,
+            //     'remember_token' => Str::random(10),
+            // ]);
             
             $user = User::create([
                 'name' => 'user',
