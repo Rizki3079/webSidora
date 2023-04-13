@@ -1,6 +1,7 @@
 @extends('template_admin')
 
        <!-- START FORM -->
+    
        @section('header_section')
     <h2 class="text-white pb-2 fw-bold">Formulir Donor Darah</h2>
     <h5 class="text-white op-7 mb-2">Halaman Formulir</h5>
@@ -132,4 +133,5 @@
             </div>
           </form>
         </div>
+    
 @endsection

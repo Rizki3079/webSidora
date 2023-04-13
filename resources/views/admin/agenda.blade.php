@@ -20,6 +20,7 @@
                 <th> <a href="" class="far fa-calendar-alt fa-3x text-danger"></a></th>
                 <th>Lokasi</th>
                 <th>Target Kantong</th>
+                
                 <th>
                     @can('admin')
                     <a href="/app-admin/agenda/create" class="btn btn-success">Tambah Data</a>
@@ -41,7 +42,7 @@
                         <a href="/app-admin/agenda/edit/{{ $agenda->id }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="/app-admin/agenda/destroy/{{ $agenda->id }}" class="btn btn-sm btn-danger">Hapus</a>
                         @endcan
-                        @can('user')
+                        @can('user') 
                         <a href="/app-admin/{{ $agenda->id }}/formulir" class="btn btn-sm btn-primary">Donor</a>
                         @endcan
                        

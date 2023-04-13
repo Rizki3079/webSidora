@@ -23,11 +23,14 @@ return new class extends Migration
             $table->string('pekerjaan');
             $table->string('tempat_lahir');
             $table->date('tgl_lahir');
+            $table->date('tgl_donor');
             $table->integer('kartu_donor');
             $table->string('jk');
             $table->string('desa');
             $table->string('kecamatan');
             $table->string('kabupaten');
+            $table->string('jenis_darah');
+            $table->string('tipe_darah');
             $table->string('status_pernikahan'); 
         });
     }

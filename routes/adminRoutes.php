@@ -5,6 +5,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DarahController;
 use App\Http\Controllers\agendaController;
+use App\Http\Controllers\stokController;
+use App\Http\Controllers\DatapermohonanController;
+use App\Http\Controllers\DatapengirimanController;
+
 
 Route::get("/login", [AdminController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('proccess-login');
@@ -24,6 +28,7 @@ Route::middleware('auth')->group(function(){
     Route::post("/app-admin/agenda/update", [AgendaController::class, 'update']);
     Route::get("/app-admin/agenda/create", [AgendaController::class, 'create']);
     Route::get("/app-admin/agenda/destroy/{id}", [AgendaController::class, 'destroy']);
+  
 });
 
 
@@ -32,3 +37,9 @@ Route::middleware('auth')->group(function(){
 // Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //dashboard
+
+Route::get("/app-admin/datapermohonan", [DatapermohonanController::class, 'index']);
+Route::get("/app-admin/datapermohonan/edit/{id}", [DatapermohonanController::class, 'edit']);
+Route::post("/app-admin/datapermohonan/update/{id}", [DatapermohonanController::class, 'update']);
+
+Route::get("/app-admin/datapengiriman", [DatapengirimanController::class, 'index']);

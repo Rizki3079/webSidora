@@ -97,9 +97,7 @@
                     <div class="user">
                         <div class="info">
                             <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                                <span>
-                                    test
-                                </span>
+                                
                             </a>
                         </div>
                     </div>
@@ -128,13 +126,42 @@
                                 <p>Agenda Donor</p>
                             </a>
                         </li>
-                        <li class="nav-item  {{ Request::is('app-admin/riwayat*') ? 'active' : '' }}">
-                            <a href="{{ url('app-admin/riwayat') }}">
-                                <i class="fas fa-qrcode"></i>
-                                <p>Riwayat Donor</p>
-                            </a>
-                        </li>
                         @can('admin')
+                        {{-- <li class="nav-item  {{ Request::is('app-admin/laporan*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/laporan') }}">
+                                <i class="nav-icon fas fa-list"></i>
+                                <p>Laporan</p>
+                            </a>
+                        </li> --}}
+                        <li class="nav-item">
+							<a data-toggle="collapse" href="#submenu">
+								<i class="fas fa-bars"></i>
+								<p>Laporan</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="submenu">
+								<ul class="nav nav-collapse">
+									<li class="nav-item  {{ Request::is('app-admin/riwayat*') ? 'active' : '' }}">
+                                        <a href="{{ url('app-admin/riwayat') }}">
+                                            <i class="fas fa-qrcode"></i>
+                                            <p>Data Riwayat Donor</p>
+                                        </a>    
+                                    </li>
+                                    <li class="nav-item  {{ Request::is('app-admin/datapermohonan*') ? 'active' : '' }}">
+                                        <a href="{{ url('app-admin/datapermohonan') }}">
+                                            <i class="nav-icon fas fa-book"></i>
+                                            <p>Data Permohonan</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  {{ Request::is('app-admin/datapengiriman*') ? 'active' : '' }}">
+                                        <a href="{{ url('app-admin/datapengiriman') }}">
+                                            <i class="nav-icon fas fa-star"></i>
+                                            <p>Data Pengiriman</p>
+                                        </a>
+                                    </li>
+								</ul>
+							</div>
+						</li>
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
