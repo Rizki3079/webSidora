@@ -31,6 +31,14 @@ class UserRolePermissionSeeder extends Seeder
             // $user->assignRole('user');
             // $admin->assignRole('admin');
 
+            // $user = User::create([
+            //     'name' => 'user',
+            //     'email' => 'user@gmail.com',
+            //     'password' => bcrypt('password'),
+            //     'role' => 1,
+            //     'remember_token' => Str::random(10),
+            // ]);
+            
             $user = User::create([
                 'name' => 'user',
                 'email' => 'user@gmail.com',
@@ -43,6 +51,13 @@ class UserRolePermissionSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => bcrypt('password'),
                 'role' => 2,
+                'remember_token' => Str::random(10),
+            ]);
+            $adminrs = User::create([
+                'name' => 'adminrs',
+                'email' => 'adminrs@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 3,
                 'remember_token' => Str::random(10),
             ]);
             DB::commit();
