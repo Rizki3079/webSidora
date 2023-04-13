@@ -30,12 +30,10 @@
                 
                 <td>{{ $r->nik }}</td>
                                     <td>{{ $r->nama }}</td>
-                                    <td>{{ $r->tgl_donor }}</td>   
-                                    <td>{{ $r->tgl_formulir }}</td>   
-                    
-                </tr>
-             
-                
+                                    <td>{{ $r->tgl_donor }}</td>
+                                    {{-- <td>{{ $r->formulirs}}</td> --}}
+                                      
+                </tr>    
                 @endforeach
             </tbody>
     </table>
