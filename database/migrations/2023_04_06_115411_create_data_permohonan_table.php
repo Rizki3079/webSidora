@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('nip')->primary();
             $table->char('nama_instansi',100);
             $table->date('tanggal_pengajuan', 20);
-            $table->integer('jumlah_kantong', 100);
+            $table->integer('jumlah_kantong');
             $table->string('dokumen', 20);
             $table->char('status', 100);
             $table->timestamps();
