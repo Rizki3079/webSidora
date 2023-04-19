@@ -8,6 +8,8 @@ use App\Http\Controllers\agendaController;
 use App\Http\Controllers\stokController;
 use App\Http\Controllers\DatapermohonanController;
 use App\Http\Controllers\DatapengirimanController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get("/login", [AdminController::class, 'login'])->name('login')->middleware('guest');
@@ -43,3 +45,10 @@ Route::get("/app-admin/datapermohonan/edit/{id}", [DatapermohonanController::cla
 Route::post("/app-admin/datapermohonan/update/{id}", [DatapermohonanController::class, 'update']);
 
 Route::get("/app-admin/datapengiriman", [DatapengirimanController::class, 'index']);
+Route::get("/app-admin/datapengiriman/create", [DatapengirimanController::class, 'create']);
+Route::post("/app-admin/datapengiriman/store", [DatapengirimanController::class, 'store']);
+Route::get("/app-admin/datapengiriman/edit/{id}", [DatapengirimanController::class, 'edit']);
+
+Route::get("/app-admin/pengguna", [PenggunaController::class, 'index']);
+
+Route::get("/app-admin/profile", [ProfileController::class, 'index']);

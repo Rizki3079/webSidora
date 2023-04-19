@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('data_pengiriman', function (Blueprint $table) {
             $table->integer('nip')->primary();
             $table->char('nama_instansi',100);
-            $table->date('tanggal_pengajuan');
             $table->date('tanggal_pemrosesan');
             $table->char('jumlah_kantong',100);
             $table->char('dokumen', 20);

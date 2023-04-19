@@ -42,6 +42,15 @@
              <P>ndari melakukan latihan keras atau mengangkat beban yang berat sebelum dan sesudah darah dari tubuh kamu diambil. Kamu harus menjaga tubuh tetap dalam keadaan istirahat agar dapat mengisi kembali cairan yang hilang selama donor dilakukan. Hal ini membuat kamu terhindar dari pusing dan menjaga tetap sehat.</P>
           </li>
         </ul>
+        <h5 class="mt-0 mb-1"><b>Tata Cara melakukan donor darah</b></h5>
+        <li class="list-group list-group-numbered">1. Calon Pendonor mengisi Formulir pada website resmi PMI.</li>
+        <li class="list-group list-group-numbered">2. Calon Pendonor datang ke PMI untuk di timbang berat badannya.</li>
+        <li class="list-group list-group-numbered">3. Calon Pendonor diperiksa kesehatannya oleh dokter PMI.</li>
+        <li class="list-group list-group-numbered">4. Calon Pendonor di periksa tekanan darahnya.</li>
+        <li class="list-group list-group-numbered">5. Calon Pendonor diperiksa golongan darah dan kadar haemoglobin (HB).</li>
+        <li class="list-group list-group-numbered">6. Setelah memenuhi syarat untuk donor, Calon Pendonor dipersilakan menempati tempat pengambilan darah (Aftap).</li>
+        <li class="list-group list-group-numbered">7. Setelah selesai, Pendonor kembali ke bagian administrasi donor darah untuk menerima menu donor dan kartu donor yang telah diregistrasi oleh petugas.</li>
+        <li class="list-group list-group-numbered">8. Pendonor dapat kembali menyumbangkan darahnya setelah 3 bulan berikutnya.</li>
           </div>
         </div>
         </div>

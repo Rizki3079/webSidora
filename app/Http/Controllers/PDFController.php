@@ -51,7 +51,7 @@ class PDFController extends Controller
             'jenis_darah' => $request->jenis_darah,
             'tipe_darah' => $request->tipe_darah,
             'status_pernikahan' => $request->status_pernikahan,
-            'user_id' => auth()->user()->id,
+            // 'user_id' => auth()->user()->id,
             'tgl_donor' => $request->tgl_donor
         ]);
 

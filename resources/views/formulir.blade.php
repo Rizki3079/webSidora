@@ -76,10 +76,29 @@
                     <input type="text" class="form-control" name='desa' required id="desa">
                 </div>
             </div>
+            
             <div class="mb-3 row">
-                <label for="kecamatan" class="col-sm-2 col-form-label">Kecamatan</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name='kecamatan' required id="kecamatan">
+            <label for="kabupaten" class="col-sm-2 col-form-label">Kecamatan</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-sm" name="kecamatan">
+                    <option selected disabled>Pilih Kecamatan</option>
+                    <option value="Jatibarang">Jatibarang</option>
+                    <option value="Sindang">Sindang</option>
+                    <option value="Indramayu">Indramayu</option>
+                    <option value="Lohbener">Lohbener</option>
+                    <option value="Jatibarang">Jatibarang</option>
+                    <option value="Anjatan">Anjatan</option>
+                    <option value="Arahan">Arahan</option>
+                    <option value="Balongan">Balongan</option>
+                    <option value="Jatibarang">Bangodua</option>
+                    <option value="Sindang">Bongas</option>
+                    <option value="Indramayu">Cantigi</option>
+                    <option value="Lohbener">Cikedung</option>
+                    <option value="Jatibarang">Gabuswetan</option>
+                    <option value="Anjatan">Gantar</option>
+                    <option value="Arahan">Haurgeulis</option>
+                    <option value="Balongan">Juntinyuat</option>
+                </select>
                 </div>
             </div>
             <div class="mb-3 row">

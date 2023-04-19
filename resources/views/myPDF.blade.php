@@ -11,5 +11,5 @@
 <h5>Kecamatan : {{$kecamatan}}</h5>
 <h5>Kabupaten : {{$kabupaten}}</h5>
 <h5>Jenis Darah : {{$jenis_darah}}</h5>
-<h5>Tipe DaraH : {{$tipe_darah}}</h5>
+<h5>Tipe Darah : {{$tipe_darah}}</h5>
 <h5>Status Pernikahan : {{$status_pernikahan}}</h5>
