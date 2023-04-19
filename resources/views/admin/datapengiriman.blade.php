@@ -19,11 +19,14 @@
             <tr>
                 <th>NIP</th>
                 <th>Nama Instansi</th>
-                <th>Tanggal Pengajuan</th>
+                {{-- <th>Tanggal Pengajuan</th> --}}
                 <th>Tanggal Pemrosesan</th>
                 <th>Jumlah Kantong</th>
                 <th>Dokumen</th>
                 <th>Status</th>
+                <th>
+                    <a href="/app-admin/datapengiriman/create" class="btn btn-success">Tambah Data</a>
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -32,12 +35,12 @@
                     
                     <td>{{ $datapengiriman->nip }}</td>
                                         <td>{{ $datapengiriman->nama_instansi }}</td>   
-                                        <td>{{ $datapengiriman->tanggal_pengajuan }}</td>
+                                        {{-- <td>{{ $datapengiriman->tanggal_pengajuan }}</td> --}}
                                         <td>{{ $datapengiriman->tanggal_pemrosesan }}</td>
                                         <td>{{ $datapengiriman->jumlah_kantong}}</td>  
                                         <td>{{ $datapengiriman->dokumen }}</td>
                                         <td>{{ $datapengiriman->status }}</td>             
-                                          
+                    
                         
                     </tr>
                     @endforeach

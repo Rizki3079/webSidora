@@ -168,18 +168,13 @@
                             </span>
                             <h4 class="text-section">Navigasi Pengguna</h4>
                         </li>
-                        <li class="nav-item  {{ Request::is('app-admin/user*') ? 'active' : '' }}">
-                            <a href="{{ url('app-admin/user') }}">
+                        <li class="nav-item  {{ Request::is('app-admin/pengguna*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/pengguna') }}">
                                 <i class="fas fa-users"></i>
-                                <p>Pengguna Admin</p>
+                                <p>Pengguna </p>
                             </a>
                         </li>
-                        <li class="nav-item  {{ Request::is('app-admin/user*') ? 'active' : '' }}">
-                            <a href="{{ url('app-admin/user') }}">
-                                <i class="fas fa-users"></i>
-                                <p>Pengguna User</p>
-                            </a>
-                        </li>
+                        
                         @endcan
                     </ul>
                 </div>
