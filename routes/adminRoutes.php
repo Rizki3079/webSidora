@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function(){
 
 Route::get("/app-admin/datapermohonan", [DatapermohonanController::class, 'index']);
 Route::get("/app-admin/datapermohonan/edit/{id}", [DatapermohonanController::class, 'edit']);
-Route::post("/app-admin/datapermohonan/update/{id}", [DatapermohonanController::class, 'update']);
+Route::post("/app-admin/datapermohonan/update{id}", [DatapermohonanController::class, 'update']);
 
 Route::get("/app-admin/datapengiriman", [DatapengirimanController::class, 'index']);
 Route::get("/app-admin/datapengiriman/create", [DatapengirimanController::class, 'create']);

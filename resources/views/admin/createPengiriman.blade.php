@@ -55,35 +55,40 @@
         <div class="col-md-12">
             <div class="card full-height">
                 <div class="card-body">
-    <form method="POST" action="/app-admin/agenda/store">
+    <form method="POST" action="/app-admin/datapengiriman/store">
         {{ csrf_field() }}
-        <div class="mb-3">
-            <label class="form-label">NIP</label>
+        {{-- <input type="hidden" name="nama_instansi"> --}}
+        {{-- <div class="mb-3">
+            <label class="form-label">ID</label>
             <input type="text" name="nip" class="form-control">
-        </div>
+        </div> --}}
         <div class="mb-3">
             <label class="form-label">Nama Instansi</label>
-            <input type="text" name="nama" class="form-control">
+            <input type="text" name="nama_instansi" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label">Tanggal Pemrosesan</label>
-            <input type="date" name="tanggal" class="form-control">
+            <input type="date" name="tanggal_pemrosesan" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label">Jumlah Kantong</label>
-            <input type="text" name="jumlah" class="form-control">
+            <input type="text" name="jumlah_kantong" class="form-control">
         </div>
+        {{-- <div class="mb-3">
+            <label class="form-label">Dokumen</label>
+            <input type="text" name="dokumen" class="form-control">
+        </div> --}}
         <div class="mb-3">
-            <label for="status" class="col-sm-2 col-form-label">Statuss</label>
-            <select class="custom-select custom-select-sm" name="tipe_darah">
+            <label for="status" class="col-sm-2 col-form-label">Status</label>
+            <select class="custom-select custom-select-sm" name="status">
                 <option selected disabled>Pilih Status</option>
-                    <option value="Diajukan">Diajukan</option>
+                    <option value="Diajukan">Baru Diajukan</option>
                     <option value="Sedang Diproses">Sedang Diproses</option>
                     <option value="Selesai">Selesai</option>
             </select>
         </div>
         
-        <a href="/app-admin/agenda" class="btn btn-secondary">KEMBALI</a>
+        <a href="/app-admin/datapengiriman" class="btn btn-secondary">KEMBALI</a>
         <button type="submit" class="ml-2 btn btn-primary">TAMBAH</button>
     </form>
         

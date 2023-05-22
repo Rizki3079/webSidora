@@ -18,18 +18,18 @@ class DatapermohonanController extends Controller
     public function edit($id) {
         $title = 'Perbarui Status Permohonan';
         $slug = 'datapermohonan';
-        $datapermohonan = DataPermohonan::all()->where('nip', '=', $id)->first();
+        $datapermohonan = DataPermohonan::where('id', $id)->first();
         return view('admin.editPermohonan', compact('title', 'slug', 'datapermohonan'));
     }
 
-    public function update(Request $request, $id){
-        $id = $request->nip;
-        DataPermohonan::where('nip', $id)->update([
-            'nip' => $request->nip,
+    public function update(Request $request) {
+        $id = $request->id;
+        DataPermohonan::where('id', $id)->update([
+            // 'nip' => $request->nip,
             'nama_instansi' => $request->nama_instansi,
             'tanggal_pengajuan' => $request->tanggal_pengajuan,
             'jumlah_kantong' => $request->jumlah_kantong,
-            'dokumen' => $request->dokumen,
+            // 'dokumen' => $request->dokumen,
             'status' => $request->status
         ]);
         return redirect('app-admin/datapermohonan');

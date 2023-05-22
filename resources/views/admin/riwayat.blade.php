@@ -20,7 +20,7 @@
                 <th>NIK</th>
                 <th>Nama Pendonor</th>
                 <th>Tanggal Donor</th>
-                <th>Formulir</th>
+                {{-- <th>Detail</th> --}}
                 
             </tr>
             </thead>

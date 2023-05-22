@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
+
 {
     /**
      * Run the migrations.
@@ -14,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('data_permohonan', function (Blueprint $table) {
-            $table->integer('nip')->primary();
+            $table->integer('id')->primary();
             $table->char('nama_instansi',100);
             $table->date('tanggal_pengajuan', 20);
             $table->integer('jumlah_kantong');
-            $table->string('dokumen', 20);
+            // $table->string('dokumen', 20);
             $table->char('status', 100);
             $table->timestamps();
         });

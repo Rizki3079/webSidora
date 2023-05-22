@@ -126,6 +126,21 @@
                                 <p>Agenda Donor</p>
                             </a>
                         </li>
+                        @can('user')
+                        <li class="nav-item  {{ Request::is('app-admin/agenda*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/agenda') }}">
+                                <i class="fas fa-qrcode"></i>
+                                <p>Riwayat Donor</p>
+                            </a>
+                        </li>
+                        <li class="nav-item  {{ Request::is('app-admin/agenda*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/agenda') }}">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>Data Permohonan</p>
+                            </a>
+                        </li>
+                        @endcan
+                        
                         @can('admin')
                         {{-- <li class="nav-item  {{ Request::is('app-admin/laporan*') ? 'active' : '' }}">
                             <a href="{{ url('app-admin/laporan') }}">

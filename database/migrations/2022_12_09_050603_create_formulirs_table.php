@@ -26,7 +26,7 @@ return new class extends Migration
             $table->date('tgl_donor');
             $table->integer('kartu_donor');
             $table->string('jk');
-            $table->string('desa');
+            // $table->string('desa');
             $table->string('kecamatan');
             $table->string('kabupaten');
             $table->string('jenis_darah');

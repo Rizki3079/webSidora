@@ -17,31 +17,29 @@
                 <table class="table table-bordered table-striped" id="example1">
         <thead>
             <tr>
-                <th>NIP</th>
+                {{-- <th>NIP</th> --}}
+                {{-- <th>id</th> --}}
                 <th>Nama Instansi</th>
                 <th>Tanggal Pengajuan</th>
                 <th>Jumlah Kantong</th>
-                <th>Dokumen</th>
+                {{-- <th>Dokumen</th> --}}
                 <th>Status</th>
                 
-            </tr>
+            </tr>zz
             </thead>
             <tbody>
             @foreach($datapermohonan as $datapermohonan )
                 <tr>
                 
-                <td>{{ $datapermohonan->nip }}</td>
                                     <td>{{ $datapermohonan->nama_instansi }}</td>
                                     <td>{{ $datapermohonan->tanggal_pengajuan}}</td> 
                                     <td>{{ $datapermohonan->jumlah_kantong}}</td> 
-                                    <td>{{ $datapermohonan->dokumen}}</td> 
+                                    {{-- <td>{{ $datapermohonan->dokumen}}</td>  --}}
                                     <td>{{ $datapermohonan->status }}</td>
-                                    <td>
-
-                                    <a href="/app-admin/{{ $datapermohonan->id }}/editPermohonan" class="btn btn-sm btn-primary">Edit</a>
-
-                                    </td>                  
-                    
+                    <td>
+                        <a href="/app-admin/datapermohonan/edit/{{ $datapermohonan->id }}" class="btn btn-sm btn-primary">Edit</a>   
+                </tr>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
