@@ -59,7 +59,7 @@ class FormulirController extends Controller
             'tgl_lahir' => $request->tgl_lahir,
             'kartu_Donor' => $request->kartu_Donor,
             'jk' => $request->jk,
-            'desa' => $request->desa,
+            // 'desa' => $request->desa,
             'kecamatan' => $request->kecamatan,
             'kabupaten' => $request->kabupaten,
             'jenis_darah' => $request->jenis_darah,

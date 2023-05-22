@@ -63,18 +63,31 @@
                     <small class="text-danger">*Tidak Wajib Diisi</small>
                 </div>
             </div>
-            <div class="mb-3 row">
+            {{-- <div class="mb-3 row">
                 <label for="jk" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name='jk' required id="jk">
                 </div>
-            </div>
+            </div> --}}
             <div class="mb-3 row">
+                <label for="jk" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="jk" required id="Laki-laki" value="1">
+                    <label for="laki-laki" class="form-check-label">Laki - laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="jk" class="form-check-input" required id="perempuan" value="2">
+                    <label for="perempuan" class="form-check-label">Perempuan</label>
+                </div>
+            </div>
+            </div><br>
+            {{-- <div class="mb-3 row">
                 <label for="desa" class="col-sm-2 col-form-label">Desa</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name='desa' required id="desa">
                 </div>
-            </div>
+            </div> --}}
             <div class="mb-3 row">
                 <label for="kecamatan" class="col-sm-2 col-form-label">Kecamatan</label>
                 <div class="col-sm-10">

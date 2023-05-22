@@ -6,20 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**z
+    /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('data_pengiriman', function (Blueprint $table) {
-            // $table->integer('id')->primary();
-            $table->char('nama_instansi',100);
-            $table->date('tanggal_pemrosesan');
-            $table->char('jumlah_kantong',100);
-            // $table->char('dokumen', 20);
-            $table->char('status',100);
+        Schema::create('table_riwayat', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_pengiriman');
+        Schema::dropIfExists('table_riwayat');
     }
 };

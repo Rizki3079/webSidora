@@ -17,29 +17,37 @@
                 <table class="table table-bordered table-striped" id="example1">
         <thead>
             <tr>
-                <th>NIP</th>
+                {{-- <th>ID</th> --}}
                 <th>Nama Instansi</th>
                 {{-- <th>Tanggal Pengajuan</th> --}}
                 <th>Tanggal Pemrosesan</th>
                 <th>Jumlah Kantong</th>
-                <th>Dokumen</th>
+                {{-- <th>Dokumen</th> --}}
                 <th>Status</th>
                 <th>
                     <a href="/app-admin/datapengiriman/create" class="btn btn-success">Tambah Data</a>
-                </th>
+                    {{-- <a href="/app-admin/datapengiriman/edit/{{ $datapengiriman }}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="/app-admin/datapengiriman/destroy/{{ $datapengiriman}}" class="btn btn-sm btn-danger">Hapus</a>
+                </th> --}}
+              
             </tr>
             </thead>
             <tbody>
                 @foreach($datapengiriman as $datapengiriman )
                     <tr>
                     
-                    <td>{{ $datapengiriman->nip }}</td>
+                    {{-- <                   <td>{{ $datapengiriman->id }}</> --}}
                                         <td>{{ $datapengiriman->nama_instansi }}</td>   
                                         {{-- <td>{{ $datapengiriman->tanggal_pengajuan }}</td> --}}
                                         <td>{{ $datapengiriman->tanggal_pemrosesan }}</td>
                                         <td>{{ $datapengiriman->jumlah_kantong}}</td>  
-                                        <td>{{ $datapengiriman->dokumen }}</td>
-                                        <td>{{ $datapengiriman->status }}</td>             
+                                        {{-- <td>{{ $datapengiriman->dokumen }}</td> --}}
+                                        <td>{{ $datapengiriman->status }}</td>   
+                    <td>
+                        <a href="/app-admin/datapengiriman/edit/{{ $datapengiriman }}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="/app-admin/datapengiriman/destroy/{{ $datapengiriman}}" class="btn btn-sm btn-danger">Hapus</a>
+                    </th>
+                </td>          
                     
                         
                     </tr>

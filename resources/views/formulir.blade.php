@@ -67,18 +67,25 @@
             <div class="mb-3 row">
                 <label for="jk" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name='jk' required id="jk">
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="jk" required id="laki-laki" value="Laki-laki">
+                    <label for="Laki-laki" class="form-check-label">Laki-laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="jk" class="form-check-input" required id="perempuan" value="Wanita">
+                    <label for="perempuan" class="form-check-label">perempuan</label>
                 </div>
             </div>
-            <div class="mb-3 row">
+            </div><br>
+            {{-- <div class="mb-3 row">
                 <label for="desa" class="col-sm-2 col-form-label">Desa</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name='desa' required id="desa">
                 </div>
-            </div>
+            </div> --}}
             
             <div class="mb-3 row">
-            <label for="kabupaten" class="col-sm-2 col-form-label">Kecamatan</label>
+            <label for="kecamatan" class="col-sm-2 col-form-label">Kecamatan</label>
             <div class="col-sm-10">
                 <select class="custom-select custom-select-sm" name="kecamatan">
                     <option selected disabled>Pilih Kecamatan</option>

@@ -14,9 +14,16 @@ class PDFController extends Controller
     {
         if ($request->status_pernikahan == 1) {
             $status_pernikahan = 'Menikah';
-        } else {
+        } else if ($request->status_pernikahan == 2) {
             $status_pernikahan = 'Belum Menikah';
-        }
+        } 
+        
+        // if ($request->jk == 1) {
+        //     $jk = 'Laki - Laki';
+        // } else if ($request->jk == 2) {
+        //     $jk = 'Perempuan';
+    
+        
         $data = [
             'title' => 'Cetak Formulir Donor Darah',
             'nik' => $request->nik,
@@ -27,8 +34,9 @@ class PDFController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tgl_lahir' => $request->tgl_lahir,
             'kartu_Donor' => $request->kartu_Donor,
+            // 'jk' => $request->jk,
             'jk' => $request->jk,
-            'desa' => $request->desa,
+            // 'desa' => $request->desa,
             'kecamatan' => $request->kecamatan,
             'kabupaten' => $request->kabupaten,
             'jenis_darah' => $request->jenis_darah,
@@ -45,7 +53,7 @@ class PDFController extends Controller
             'tgl_lahir' => $request->tgl_lahir,
             'kartu_Donor' => $request->kartu_Donor,
             'jk' => $request->jk,
-            'desa' => $request->desa,
+            // 'desa' => $request->desa,
             'kecamatan' => $request->kecamatan,
             'kabupaten' => $request->kabupaten,
             'jenis_darah' => $request->jenis_darah,
