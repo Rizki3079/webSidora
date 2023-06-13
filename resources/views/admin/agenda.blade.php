@@ -22,9 +22,9 @@
                 <th>Target Kantong</th>
                 
                 <th>
-                    @can('admin')
+                    @role('adminPmi')
                     <a href="/app-admin/agenda/create" class="btn btn-success">Tambah Data</a>
-                    @endcan
+                    @endrole
                 </th>
                 
             </tr>
@@ -38,11 +38,11 @@
                     <td>{{ $agenda->tempat }}</td>
                     <td>{{ $agenda->target }}</td>
                     <td>
-                        @can('admin')
+                        @role('adminPmi')
                         <a href="/app-admin/agenda/edit/{{ $agenda->id }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="/app-admin/agenda/destroy/{{ $agenda->id }}" class="btn btn-sm btn-danger">Hapus</a>
-                        @endcan
-                        @can('user') 
+                        @endrole
+                        @can('userPendonor') 
                         <a href="/app-admin/{{ $agenda->id }}/formulir" class="btn btn-sm btn-primary">Donor</a>
                         @endcan
                        

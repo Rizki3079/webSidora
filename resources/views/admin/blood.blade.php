@@ -37,9 +37,9 @@
                 <td>{{ $blood->ab }}</td>
                 <td>{{ $blood->o }}</td>
                 <td>
-                @can('admin')
+                @role('adminPmi')
                     <a href="{{ url('/app-admin/edit/' . $blood->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                @endcan
+                @endrole
                 </td>
                 <!-- <a href='#' data-id="{{ $blood->id }}" class="btn btn-warning btn-sm tombol-edit">Edit</a> -->
                 

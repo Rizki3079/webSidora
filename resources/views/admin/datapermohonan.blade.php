@@ -25,7 +25,6 @@
                 {{-- <th>Dokumen</th> --}}
                 <th>Status</th>
                 
-            </tr>zz
             </thead>
             <tbody>
             @foreach($datapermohonan as $datapermohonan )
@@ -36,10 +35,12 @@
                                     <td>{{ $datapermohonan->jumlah_kantong}}</td> 
                                     {{-- <td>{{ $datapermohonan->dokumen}}</td>  --}}
                                     <td>{{ $datapermohonan->status }}</td>
+                                    
+                @role('adminPmi')
                     <td>
-                        <a href="/app-admin/datapermohonan/edit/{{ $datapermohonan->id }}" class="btn btn-sm btn-primary">Edit</a>   
-                </tr>
+                        <a href="/app-admin/datapermohonan/edit/{{ $datapermohonan->id }}" class="btn btn-sm btn-primary">Edit</a> 
                     </td>
+                @endrole
                 </tr>
                 @endforeach
             </tbody>

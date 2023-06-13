@@ -24,9 +24,9 @@
                 <th>AB</th>
                 <th>O</th>
                 <th>
-                    @can('admin')
+                    {{-- @can('admin') --}}
                     <a href="/app-admin/stok/create" class="btn btn-success">Tambah Data</a>
-                    @endcan
+                    {{-- @endcan --}}
                 </th>
                 
             </tr>
@@ -42,10 +42,10 @@
                     <td>{{ $stok->ab }}</td>
                     <td>{{ $stok->o}}</td>
                     <td>
-                        @can('admin')
+                        {{-- @can('admin') --}}
                         <a href="/app-admin/stok/edit/{{ $stok->id }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="/app-admin/stok/destroy/{{ $stok->id }}" class="btn btn-sm btn-danger">Hapus</a>
-                        @endcan
+                        {{-- @endcan --}}
                        
                     </td>
                 </tr>

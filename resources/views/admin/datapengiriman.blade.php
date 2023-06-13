@@ -42,11 +42,13 @@
                                         <td>{{ $datapengiriman->tanggal_pemrosesan }}</td>
                                         <td>{{ $datapengiriman->jumlah_kantong}}</td>  
                                         {{-- <td>{{ $datapengiriman->dokumen }}</td> --}}
-                                        <td>{{ $datapengiriman->status }}</td>   
+                                        <td>{{ $datapengiriman->status }}</td>  
+                    @role('adminPmi')
                     <td>
                         <a href="/app-admin/datapengiriman/edit/{{ $datapengiriman }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="/app-admin/datapengiriman/destroy/{{ $datapengiriman}}" class="btn btn-sm btn-danger">Hapus</a>
                     </th>
+                    @endrole
                 </td>          
                     
                         
