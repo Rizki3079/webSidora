@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Role;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
@@ -77,35 +78,40 @@ class UserRolePermissionSeeder extends Seeder
             // Role::create(['name' => 'user'])->givePermissionTo(['read']);
             // Role::create(['name' => 'admin'])->givePermissionTo(['create']);
 
-            // $user->assignRole('user');
-            // $admin->assignRole('admin');
+            $permissions = ['userPendonor', 'adminPmi'];
 
-            // $user = User::create([
-            //     'name' => 'user',
-            //     'email' => 'user@gmail.com',
-            //     'password' => bcrypt('password'),
-            //     'role' => 1,
-            //     'remember_token' => Str::random(10),
-            // ]);
+            foreach ($permissions as $data) {
+                Permission::updateOrCreate([
+                    'name'  => $data,
+                    // 'guard_name' => 'web'
+                ]);
+            }
             
-            // $user = User::create([
-            //     'name' => 'user',
-            //     'email' => 'user@gmail.com',
-            //     'password' => bcrypt('password'),
-            //     'role' => 1,
-            //     'remember_token' => Str::random(10),
-            // ]);
-            // $admin = User::create([
-            //     'name' => 'admin',
-            //     'email' => 'admin@gmail.com',
-            //     'password' => bcrypt('password'),
-            //     'role' => 2,
-            //     'remember_token' => Str::random(10),
-            // ]);
-            // $adminrs = User::create([
-            //     'name' => 'adminrs',
-            //     'email' => 'adminrs@gmail.com',
-            //     'password' => bcrypt('password'),
-            //     'role' => 3,
-            //     'remember_token' => Str::random(10),
-            // ]);
+            $user = User::create([
+                'name' => 'userPendonor',
+                'email' => 'userPendonor@gmail.com',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                // 'remember_token' => Str::random(10),
+            ])->assignRole('userPendonor');
+
+            $admin = User::create([
+                'name' => 'adminPmi',
+                'email' => 'adminPmi@gmail.com',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                // 'remember_token' => Str::random(10),
+            ])->assignRole('adminPmi');
+
+            $adminrs = User::create([
+                'name' => 'adminRs',
+                'email' => 'adminRs@gmail.com',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                // 'remember_token' => Str::random(10),
+            ])->assignRole('adminRs');
+
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+}
