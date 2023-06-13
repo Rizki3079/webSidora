@@ -19,7 +19,21 @@ class AuthController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect('/app-admin/dashboard');
+
+            $user = Auth::user();
+            
+            if ($user->hasRole('adminRs')) {
+                $user->syncRoles(['adminRs']);
+                return redirect('/app-admin/dashboard');
+            } elseif ($user->hasRole('adminPmi')) {
+                $user->syncRoles(['adminPmi']);
+                return redirect('/app-admin/dashboard');
+            } elseif ($user->hasRole('userPendonor')) {
+                $user->syncRoles(['userPendonor']);
+                return redirect('/app-admin/dashboard');
+            }  else {
+                return redirect('/login');
+            }
         }else {
             session()->flash('msg', "<strong>Maaf, login gagal.</strong> <br> Periksa kembali data login anda !");
             session()->flash('msg_status', 'danger');
