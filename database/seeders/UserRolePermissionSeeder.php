@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Role;
-use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
@@ -34,49 +33,6 @@ class UserRolePermissionSeeder extends Seeder
                     // 'guard_name' => 'web'
                 ]);
             }
-
-            $permissions = ['userPendonor', 'adminPmi'];
-
-            foreach ($permissions as $data) {
-                Permission::updateOrCreate([
-                    'name'  => $data,
-                    // 'guard_name' => 'web'
-                ]);
-            }
-            
-            $user = User::create([
-                'name' => 'userPendonor',
-                'email' => 'userPendonor@gmail.com',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-                // 'remember_token' => Str::random(10),
-            ])->assignRole('userPendonor');
-
-            $admin = User::create([
-                'name' => 'adminPmi',
-                'email' => 'adminPmi@gmail.com',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-                // 'remember_token' => Str::random(10),
-            ])->assignRole('adminPmi');
-
-            $adminrs = User::create([
-                'name' => 'adminRs',
-                'email' => 'adminRs@gmail.com',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-                // 'remember_token' => Str::random(10),
-            ])->assignRole('adminRs');
-
-            DB::commit();
-        } catch (\Throwable $th) {
-            DB::rollback();
-            throw $th;
-        }
-    }
-}
-
- // Permission::create(['name' => 'read']);
-            // Permission::create(['name' => 'create']);
-            // Role::create(['name' => 'user'])->givePermissionTo(['read']);
-            // Role::create(['name' => 'admin'])->givePermissionTo(['create']);
 
             $permissions = ['userPendonor', 'adminPmi'];
 
