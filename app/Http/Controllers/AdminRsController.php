@@ -56,12 +56,12 @@ class AdminRsController extends Controller
 
     public function dashboard()
     {
-        return view('adminrs.dashboard');
+        return view('adminRs.dashboard');
     }
 
     public function blood()
     {
-        $bloods = DB::table('blood')->select([
+        $bloodsrs = DB::table('bloodrs')->select([
                 'id',
                 'jenis_darah',
                 'a',
@@ -70,25 +70,11 @@ class AdminRsController extends Controller
                 'o'
             ])->get();
         $data = [
-            'bloods' => $bloods
+            'bloodrs' => $bloodsrs
         ];
-        return view('adminrs.blood', compact('bloods'));
+        return view('adminRs.bloodrs', compact('bloodsrs'));
     }
     
-    public function agenda()
-    {
-        $agenda = DB::table('agenda')->select([
-            'id',
-            'tanggal',
-            'tempat',
-            'target',
-        ])->get();
-        $data = [
-            'agenda' => $agenda
-        ];
-            
-        return view('adminrs.agenda', $data );
-    }
     public function riwayat()
     {
 
@@ -101,7 +87,7 @@ class AdminRsController extends Controller
         $data = [
             'riwayat' => $Riwayat
         ];
-        return view('adminrs.riwayat', $data);
+        return view('adminRs.riwayat', $data);
 
 
     }

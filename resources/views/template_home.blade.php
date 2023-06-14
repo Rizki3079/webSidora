@@ -141,7 +141,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2022 <a href="" target="_blank">SIDORA PART II</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2023 <a href="" target="_blank">SIDORA PART III</a>. All right reserved</p>
     </div>
   </footer>
 

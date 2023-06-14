@@ -178,10 +178,10 @@
                         </li>
                         @endrole
                         @role('adminRs')
-                        <li class="nav-item  {{ Request::is('app-admin/laporan*') ? 'active' : '' }}">
-                            <a href="{{ url('app-admin/laporan') }}">
-                                <i class="nav-icon fas fa-list"></i>
-                                <p>Laporan</p>
+                        <li class="nav-item  {{ Request::is('app-admin/bloodrs*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/bloodrs') }}">
+                                <i class="fas fa-users"></i>
+                                <p>Stok Darah</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -249,8 +249,8 @@
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="copyright ml-auto">
-                        2022, <i class=""></i> by <a
-                            href="https://www.themekita.com">SIDORA PART II</a>
+                        2023, <i class=""></i> by <a
+                            href="https://www.themekita.com">SIDORA PART III</a>
                     </div>
                 </div>
             </footer>

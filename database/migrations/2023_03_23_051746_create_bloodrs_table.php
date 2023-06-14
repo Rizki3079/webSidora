@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bloodrs', function (Blueprint $table) {
-            $table->id();
+            $table->id()->primary;
+            $table->string('jenis_darah');
+            $table->integer('a');
+            $table->integer('b');
+            $table->integer('ab');
+            $table->integer('o');
             $table->timestamps();
         });
     }

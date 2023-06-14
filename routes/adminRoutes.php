@@ -2,14 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\stokController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DarahController;
 use App\Http\Controllers\agendaController;
-use App\Http\Controllers\stokController;
-use App\Http\Controllers\DatapermohonanController;
-use App\Http\Controllers\DatapengirimanController;
-use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\AdminRsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\DatapengirimanController;
+use App\Http\Controllers\DatapermohonanController;
 
 
 Route::get("/login", [AdminController::class, 'login'])->name('login')->middleware('guest');
@@ -52,3 +53,7 @@ Route::get("/app-admin/datapengiriman/edit/{id}", [DatapengirimanController::cla
 Route::get("/app-admin/pengguna", [PenggunaController::class, 'index']);
 
 Route::get("/app-admin/profile", [ProfileController::class, 'index']);
+
+
+//admin rs
+Route::get("/app-admin/bloodrs", [AdminRsController::class, 'blood']);
