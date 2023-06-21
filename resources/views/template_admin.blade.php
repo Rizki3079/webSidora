@@ -121,6 +121,18 @@
                                 <p>Stok Darah</p>
                             </a>
                         </li>
+                        <li class="nav-item  {{ Request::is('app-admin/agenda*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/agenda') }}">
+                                <i class="fas fa-th-large"></i>
+                                <p>Agenda Donor</p>
+                            </a>
+                        </li>
+                        <li class="nav-item  {{ Request::is('app-admin/datapengiriman*') ? 'active' : '' }}">
+                            <a href="{{ url('app-admin/datapengiriman') }}">
+                                <i class="nav-icon fas fa-star"></i>
+                                <p>Permohonan Darah </p>
+                            </a>
+                        </li>
                         @endrole
                         @role('adminPmi')
                         <li class="nav-item  {{ Request::is('app-admin/agenda*') ? 'active' : '' }}">

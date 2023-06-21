@@ -29,7 +29,7 @@
                 
             </tr>
             
-           
+        
             </thead>
             <tbody>
                 @foreach ($agenda as $agenda)
@@ -42,9 +42,10 @@
                         <a href="/app-admin/agenda/edit/{{ $agenda->id }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="/app-admin/agenda/destroy/{{ $agenda->id }}" class="btn btn-sm btn-danger">Hapus</a>
                         @endrole
-                        @can('userPendonor') 
+
+                        @role('userPendonor') 
                         <a href="/app-admin/{{ $agenda->id }}/formulir" class="btn btn-sm btn-primary">Donor</a>
-                        @endcan
+                        @endrole
                        
                     </td>
                 </tr>

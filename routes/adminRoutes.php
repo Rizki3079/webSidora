@@ -44,6 +44,9 @@ Route::group(['middleware' => ['role:adminRs|adminPmi|userPendonor']], function 
 Route::get("/app-admin/datapermohonan", [DatapermohonanController::class, 'index']);
 Route::get("/app-admin/datapermohonan/edit/{id}", [DatapermohonanController::class, 'edit']);
 Route::post("/app-admin/datapermohonan/update/{id}", [DatapermohonanController::class, 'update']);
+Route::get("/app-admin/datapermohonan/create/", [DatapermohonanController::class, 'create']);
+Route::post("/app-admin/datapermohonan/store/", [DatapermohonanController::class, 'store']);
+
 
 Route::get("/app-admin/datapengiriman", [DatapengirimanController::class, 'index']);
 Route::get("/app-admin/datapengiriman/create", [DatapengirimanController::class, 'create']);

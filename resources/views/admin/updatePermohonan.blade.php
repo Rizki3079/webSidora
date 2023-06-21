@@ -53,7 +53,6 @@
         </div>
     </div>
     <a href="/app-admin/updatePermohonan" class="btn btn-secondary">KEMBALI</a>
-    
     <button type="submit"  class="btn btn-primary">UPDATE</button>
 </form>
 @endsection

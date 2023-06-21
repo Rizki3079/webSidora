@@ -25,7 +25,9 @@
                 {{-- <th>Dokumen</th> --}}
                 <th>Status</th>
                 <th>
+                    @role('adminPmi')
                     <a href="/app-admin/datapengiriman/create" class="btn btn-success">Tambah Data</a>
+                    @endrole
                     {{-- <a href="/app-admin/datapengiriman/edit/{{ $datapengiriman }}" class="btn btn-sm btn-warning">Edit</a>
                     <a href="/app-admin/datapengiriman/destroy/{{ $datapengiriman}}" class="btn btn-sm btn-danger">Hapus</a>
                 </th> --}}

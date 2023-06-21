@@ -17,6 +17,7 @@
                 <table class="table table-bordered table-striped" id="example1">
         <thead>
             <tr>
+                
                 {{-- <th>NIP</th> --}}
                 {{-- <th>id</th> --}}
                 <th>Nama Instansi</th>
@@ -24,7 +25,9 @@
                 <th>Jumlah Kantong</th>
                 {{-- <th>Dokumen</th> --}}
                 <th>Status</th>
-                
+                    @role('adminRs')
+                    <a href="/app-admin/datapermohonan/create" class="btn btn-success">Tambah Data</a>
+                    @endrole
             </thead>
             <tbody>
             @foreach($datapermohonan as $datapermohonan )
@@ -34,7 +37,7 @@
                                     <td>{{ $datapermohonan->tanggal_pengajuan}}</td> 
                                     <td>{{ $datapermohonan->jumlah_kantong}}</td> 
                                     {{-- <td>{{ $datapermohonan->dokumen}}</td>  --}}
-                                    <td>{{ $datapermohonan->status }}</td>
+                                    {{-- <td>{{ $datapermohonan->status }}</td> --}}
                                     
                 @role('adminPmi')
                     <td>
